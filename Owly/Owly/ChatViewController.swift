@@ -25,9 +25,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     // Teacher account
     var teacherAccount = "teacher@owly.com"
     
-    // Image from camera
-    var imageURL: URL!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +47,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         configureTableView()
         retrieveMessages()
-        retrieveImages()
         
         msgTableView.separatorStyle = .none
         
@@ -76,7 +72,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.messageBody.text = messageArray[indexPath.row].messageBody
         cell.senderUsername.text = messageArray[indexPath.row].sender
-        cell.avatarImageView.image = UIImage(named: "egg")
+//        cell.avatarImageView.image = UIImage(named: "egg")
+        cell.avatarImageView.image = messageArray[indexPath.row].userImage
+//        cell.userImageView.image = messageArray[indexPath.row].userImage
+        
+        print(messageArray[indexPath.row].userImage?.size)
         
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String!{
             // Messages we sent
@@ -131,7 +131,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let messageDB = Database.database().reference().child("Messages")
         
         let messageDictionary = ["Sender": Auth.auth().currentUser?.email,
-                                 "MessageBody": msgTextField.text!]
+                                 "MessageBody": msgTextField.text!,
+                                 "ImageURL": ""]
         
         messageDB.childByAutoId().setValue(messageDictionary) {
             (error, reference) in
@@ -155,22 +156,54 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let snapshotValue = snapshot.value as! Dictionary<String,String>
             let text = snapshotValue["MessageBody"]!
             let sender = snapshotValue["Sender"]!
+            let imageURL = snapshotValue["ImageURL"]!
             
             let message = Message()
-            message.messageBody = text
-            message.sender = sender
             
-            self.messageArray.append(message)
+            if imageURL != "" {
             
-            self.configureTableView()
-            self.msgTableView.reloadData()
+                print("Image URL: " + imageURL)
+                
+                let imageRef = Storage.storage().reference(forURL: imageURL)
+
+                // Download the data, assuming a max size of 1MB (you can change this as necessary)
+                imageRef.getData(maxSize: 1 * 512 * 512) { (data, error) -> Void in
+                    if let error = error {
+                        // Uh-oh, an error occurred!
+                    } else {
+                        // Data for "images/island.jpg" is returned
+                        let image = UIImage(data: data!)
+                        
+//                        message.messageBody = text
+                        message.messageBody = "Text Message"
+                        message.sender = sender
+                        message.userImage = image
+                        
+                        self.messageArray.append(message)
+                        
+                        self.configureTableView()
+                        self.msgTableView.reloadData()
+                    }
+                }
+            }
+            
+//            message.messageBody = text
+//            message.sender = sender
+//
+//            self.messageArray.append(message)
+//            print("Stored Image in messageArray:")
+//            print(message.userImage?.size)
+//            print(message.sender)
+//
+//            self.configureTableView()
+//            self.msgTableView.reloadData()
         }
     }
     
     func retrieveImages(){
         
         let imageDB = Storage.storage().reference().child("images/")
-        
+                
 //        imageDB.observe(.childAdded){ (snapshot)  in
 //
 //            // Get download URL from snapshot

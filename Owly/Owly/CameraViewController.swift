@@ -13,7 +13,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBOutlet weak var imageView: UIImageView!
     
-    var imageURL: URL!
+    var imageURL: URL? = nil
     
     let imagePicker = UIImagePickerController()
     
@@ -64,26 +64,37 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                         return
                     }
                     
-                    self.imageURL = downloadURL
+                    // Send a message with image URL
+                    let messageDB = Database.database().reference().child("Messages")
+                    
+                    let messageDictionary = ["Sender": Auth.auth().currentUser?.email,
+                                             "MessageBody": "",
+                                             "ImageURL": downloadURL.absoluteString]
+                    
+                    messageDB.childByAutoId().setValue(messageDictionary) {
+                        (error, reference) in
+                        if error != nil {
+                            print(error!)
+                        } else {
+                            print("Message saved successfully!")
+                        }
+                    }
                 }
             }
-            
-            // Pass a image to ChatViewController
+
+            // Call ChatViewController
             let chatViewController = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController
-            chatViewController?.imageURL = self.imageURL
             self.navigationController?.pushViewController(chatViewController!, animated: true)
         }
 
         imagePicker.dismiss(animated: true, completion: nil)
     }
-
-
 }
 
 extension UIImage {
     
     var scaledToSafeUploadSize: UIImage? {
-        let maxImageSideLength: CGFloat = 480
+        let maxImageSideLength: CGFloat = 256
         
         let largerSide: CGFloat = max(size.width, size.height)
         let ratioScale: CGFloat = largerSide > maxImageSideLength ? largerSide / maxImageSideLength : 1

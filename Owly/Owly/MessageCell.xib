@@ -74,10 +74,10 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImageView" destination="KKK-He-xNm" id="Fn7-YS-QGj"/>
-                <outlet property="messageBackground" destination="Yxz-95-vHl" id="i3E-B9-bCM"/>
+                <outlet property="messageBackground" destination="Yxz-95-vHl" id="ddW-ZJ-X7L"/>
                 <outlet property="messageBody" destination="Ael-H3-UuV" id="kXz-0y-fp3"/>
                 <outlet property="senderUsername" destination="khv-tc-S9N" id="9FT-43-C9p"/>
-                <outlet property="userImageView" destination="FZw-UC-nTd" id="NB1-5M-JE1"/>
+                <outlet property="userImageView" destination="FZw-UC-nTd" id="niy-ak-6c6"/>
             </connections>
             <point key="canvasLocation" x="438.39999999999998" y="380.95952023988008"/>
         </tableViewCell>
