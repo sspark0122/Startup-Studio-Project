@@ -13,7 +13,7 @@ import SVProgressHUD
 class RegisterViewController: UIViewController {
     
     
-    //Pre-linked IBOutlets
+    // Link Textfields with IBOutlets
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     

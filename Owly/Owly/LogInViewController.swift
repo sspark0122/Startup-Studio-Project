@@ -12,7 +12,7 @@ import SVProgressHUD
 
 class LogInViewController: UIViewController {
     
-    // Textfields pre-linked with IBOutlets
+    // Link Textfields with IBOutlets
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
