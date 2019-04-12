@@ -10,8 +10,9 @@ import UIKit
 
 class AlbumViewController: UIViewController {
     @IBOutlet weak var chloeEating: UIImageView!
-    @IBOutlet weak var chloeDrawing: UIImageView!
     @IBOutlet weak var chloeHalloween: UIImageView!
+    @IBOutlet weak var chloeDrawing: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
