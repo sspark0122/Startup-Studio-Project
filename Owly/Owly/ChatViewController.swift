@@ -28,8 +28,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        print(imageURL.absoluteString)
-        
         // Set delegate and datasource
         msgTableView.delegate = self
         msgTableView.dataSource = self
@@ -72,11 +70,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.messageBody.text = messageArray[indexPath.row].messageBody
         cell.senderUsername.text = messageArray[indexPath.row].sender
-//        cell.avatarImageView.image = UIImage(named: "egg")
-        cell.avatarImageView.image = messageArray[indexPath.row].userImage
-//        cell.userImageView.image = messageArray[indexPath.row].userImage
-        
-        print(messageArray[indexPath.row].userImage?.size)
+        cell.avatarImageView.image = UIImage(named: "teacherimage")
+//        cell.avatarImageView.image = messageArray[indexPath.row].userImage
+        cell.userImageView.image = messageArray[indexPath.row].userImage
         
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String!{
             // Messages we sent
@@ -174,8 +170,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                         // Data for "images/island.jpg" is returned
                         let image = UIImage(data: data!)
                         
-//                        message.messageBody = text
-                        message.messageBody = "Text Message"
+                        message.messageBody = text
                         message.sender = sender
                         message.userImage = image
                         
@@ -186,50 +181,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     }
                 }
             }
-            
-//            message.messageBody = text
-//            message.sender = sender
-//
-//            self.messageArray.append(message)
-//            print("Stored Image in messageArray:")
-//            print(message.userImage?.size)
-//            print(message.sender)
-//
-//            self.configureTableView()
-//            self.msgTableView.reloadData()
         }
-    }
-    
-    func retrieveImages(){
-        
-        let imageDB = Storage.storage().reference().child("images/")
-                
-//        imageDB.observe(.childAdded){ (snapshot)  in
-//
-//            // Get download URL from snapshot
-//            let downloadURL = snapshot.value as! String
-//
-//            print("downloaded image url: "+downloadURL)
-//
-//            // Create a storage reference from the URL
-//            let storageRef = Storage.storage().reference(forURL: downloadURL)
-//
-//            // Download the data, assuming a max size of 1MB (you can change this as necessary)
-//            storageRef.getData(maxSize: 1 * 128 * 128) { (data, error) -> Void in
-//                if let error = error {
-//                    // Uh-oh, an error occurred!
-//                } else {
-//                    // Data for "images/island.jpg" is returned
-//                    let image = UIImage(data: data!)
-//
-//                    let message = Message()
-//                    message.userImage = image
-//                    self.messageArray.append(message)
-//
-//                    self.configureTableView()
-//                    self.msgTableView.reloadData()
-//                }
-//            }
-//        }
     }
 }
