@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E223192223B2D6C0042CE56 /* ChloeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E223191223B2D6C0042CE56 /* ChloeViewController.swift */; };
 		4E6F49AF224E801A00AE5BFF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6F49AE224E801A00AE5BFF /* Media.xcassets */; };
+		4EA60C6D2273A4AB0056CCD2 /* FoodProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA60C6C2273A4AB0056CCD2 /* FoodProcessViewController.swift */; };
 		4EEEFFC9223812EE009F96D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEFFC8223812EE009F96D8 /* AppDelegate.swift */; };
 		4EEEFFCE223812EE009F96D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEFFCC223812EE009F96D8 /* Main.storyboard */; };
 		4EEEFFD3223812EF009F96D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEFFD1223812EF009F96D8 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 		29D383BC7EF80E5AE41F5844 /* Pods_Owly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Owly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E223191223B2D6C0042CE56 /* ChloeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChloeViewController.swift; sourceTree = "<group>"; };
 		4E6F49AE224E801A00AE5BFF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		4EA60C6C2273A4AB0056CCD2 /* FoodProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProcessViewController.swift; sourceTree = "<group>"; };
 		4EEEFFC5223812EE009F96D8 /* Owly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Owly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEEFFC8223812EE009F96D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EEEFFCD223812EE009F96D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		A73954A6225EEBCE003AA143 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4EA60C6C2273A4AB0056CCD2 /* FoodProcessViewController.swift */,
 				4EEEFFC8223812EE009F96D8 /* AppDelegate.swift */,
 				4EEEFFDC22382843009F96D8 /* ViewController.swift */,
 				4E223191223B2D6C0042CE56 /* ChloeViewController.swift */,
@@ -308,6 +311,7 @@
 				A795BD77225F9A1100CF6A20 /* WelcomeViewController.swift in Sources */,
 				A7223D10225FF5700076C580 /* ChatViewController.swift in Sources */,
 				4EEEFFDF22394DA1009F96D8 /* ProfileViewController.swift in Sources */,
+				4EA60C6D2273A4AB0056CCD2 /* FoodProcessViewController.swift in Sources */,
 				A795BD75225F987200CF6A20 /* LogInViewController.swift in Sources */,
 				4EEEFFE1223A94DB009F96D8 /* CameraViewController.swift in Sources */,
 				A795BD73225F984300CF6A20 /* RegisterViewController.swift in Sources */,
