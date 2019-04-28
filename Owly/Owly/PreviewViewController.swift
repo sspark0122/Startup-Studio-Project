@@ -24,7 +24,7 @@ class PreviewViewController: UIViewController {
         
         browsingImage.image = newImage
         SVProgressHUD.show()
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(update), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(update), userInfo: nil, repeats: false)
     }
     
     @objc func update() {
