@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class PreviewViewController: UIViewController {
 
@@ -20,8 +21,14 @@ class PreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         browsingImage.image = newImage
+        SVProgressHUD.show()
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(update), userInfo: nil, repeats: false)
+    }
+    
+    @objc func update() {
+        SVProgressHUD.dismiss()
         captionTextField.text = name + " " + caption
     }
     
@@ -86,6 +93,9 @@ class PreviewViewController: UIViewController {
         self.navigationController?.pushViewController(chatViewController!, animated: true)
     }
     
+    @IBAction func cancelButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

@@ -8,14 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
     }
     
-//    func addNavBarImage() {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let userPickedImage = info[.editedImage] as? UIImage {
+            
+            // Call Preview ViewController
+            let previewViewController = storyboard?.instantiateViewController(withIdentifier: "PreviewViewController") as? PreviewViewController
+            previewViewController?.newImage = userPickedImage
+            self.navigationController?.pushViewController(previewViewController!, animated: true)
+        }
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cameraButton(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    //    func addNavBarImage() {
 //
 //        let navController = navigationController!
 //
