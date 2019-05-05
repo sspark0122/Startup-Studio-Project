@@ -17,7 +17,7 @@ class PreviewViewController: UIViewController {
     
     var newImage: UIImage!
     var name = "Sung"
-    var caption = "is sleeping."
+    var caption = "is playing with a toy."
     
     override func viewDidLoad() {
         super.viewDidLoad()

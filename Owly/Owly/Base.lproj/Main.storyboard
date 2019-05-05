@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bFg-fc-3Ga">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bFg-fc-3Ga">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,20 +34,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teacherimage" translatesAutoresizingMaskIntoConstraints="NO" id="s8K-Mu-QiQ">
-                                <rect key="frame" x="0.0" y="90" width="375" height="184"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="twI-P2-NTf"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teresa Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rne-yX-kr6">
-                                <rect key="frame" x="0.0" y="282" width="375" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Keith Yu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rne-yX-kr6">
+                                <rect key="frame" x="0.0" y="277" width="375" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34I-if-SnT">
-                                <rect key="frame" x="70" y="331.5" width="80" height="80"/>
+                                <rect key="frame" x="70" y="332" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="0zs-E0-K27"/>
                                     <constraint firstAttribute="height" constant="80" id="kzy-Vq-7jI"/>
@@ -58,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-Na-5n8">
-                                <rect key="frame" x="70" y="457" width="80" height="80"/>
+                                <rect key="frame" x="70" y="457.5" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="ZH2-sf-WmZ"/>
                                     <constraint firstAttribute="height" constant="80" id="e0o-R0-NSx"/>
@@ -66,13 +60,13 @@
                                 <state key="normal" image="reports"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-ij-dDP">
-                                <rect key="frame" x="80" y="545" width="61" height="21"/>
+                                <rect key="frame" x="80" y="545.5" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uk-sE-DW2">
-                                <rect key="frame" x="225" y="331.5" width="80" height="80"/>
+                                <rect key="frame" x="225" y="332" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="FtF-HG-EC5"/>
                                     <constraint firstAttribute="height" constant="80" id="Kbz-zT-5tx"/>
@@ -80,19 +74,19 @@
                                 <state key="normal" image="announcements"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RZ-d6-ysK">
-                                <rect key="frame" x="69" y="419" width="82" height="21"/>
+                                <rect key="frame" x="69" y="419.5" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zms-8e-gp3">
-                                <rect key="frame" x="240" y="419" width="50" height="21"/>
+                                <rect key="frame" x="240" y="419.5" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yei-Vp-ims">
-                                <rect key="frame" x="219" y="451" width="93" height="93"/>
+                                <rect key="frame" x="219" y="451.5" width="93" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="Bqn-um-Vbn"/>
                                     <constraint firstAttribute="height" constant="93" id="xUe-Id-0y1"/>
@@ -103,25 +97,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-7g-p1F">
-                                <rect key="frame" x="235" y="545" width="60" height="21"/>
+                                <rect key="frame" x="235" y="545.5" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <!-- <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-Na-5n8">
-                                <rect key="frame" x="152" y="332" width="70" height="70"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="keith" translatesAutoresizingMaskIntoConstraints="NO" id="s8K-Mu-QiQ">
+                                <rect key="frame" x="104" y="90" width="166" height="184"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Sge-q1-urm"/>
-                                    <constraint firstAttribute="width" constant="70" id="arO-bQ-d0g"/>
+                                    <constraint firstAttribute="height" constant="184" id="twI-P2-NTf"/>
                                 </constraints>
-                                <state key="normal" image="reports"/>
-                            </button> -->
-                            <!-- <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-ij-dDP">
-                                <rect key="frame" x="157" y="424" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label> -->
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1428,17 +1414,18 @@
         <image name="addbutton" width="25" height="25"/>
         <image name="announcements" width="134" height="134"/>
         <image name="announcementsbutton" width="25" height="25"/>
-        <image name="child1" width="301" height="298.5"/>
-        <image name="child2" width="672" height="670"/>
-        <image name="child4" width="762.5" height="779.5"/>
-        <image name="child5" width="671.5" height="667"/>
         <image name="camerabutton" width="128" height="128"/>
+        <image name="child1" width="301" height="298"/>
+        <image name="child2" width="672" height="670"/>
+        <image name="child4" width="762" height="779"/>
+        <image name="child5" width="671" height="667"/>
         <image name="chloedrawing" width="400" height="400"/>
         <image name="chloeeating" width="398" height="398"/>
-        <image name="chloeimage" width="340.5" height="340.5"/>
+        <image name="chloeimage" width="340" height="340"/>
         <image name="editbutton" width="134" height="134"/>
         <image name="food" width="134" height="134"/>
         <image name="homebutton" width="25" height="25"/>
+        <image name="keith" width="1428" height="1402"/>
         <image name="learning" width="134" height="134"/>
         <image name="physical" width="134" height="134"/>
         <image name="profilebutton" width="25" height="25"/>
@@ -1446,7 +1433,6 @@
         <image name="reportsbutton" width="25" height="25"/>
         <image name="sleeping" width="134" height="134"/>
         <image name="social" width="134" height="134"/>
-        <image name="teacherimage" width="359.5" height="340"/>
         <image name="toilet" width="134" height="134"/>
     </resources>
     <inferredMetricsTieBreakers>
